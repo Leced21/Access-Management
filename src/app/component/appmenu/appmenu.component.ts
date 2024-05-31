@@ -34,6 +34,7 @@ export class AppmenuComponent implements OnInit, DoCheck {
 
   ngDoCheck(): void {
     this.Loginuser = localStorage.getItem('username') as string;
+    this.Setaccess();
   }
 
   Setaccess() {

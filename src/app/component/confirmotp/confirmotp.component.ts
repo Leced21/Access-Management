@@ -29,10 +29,11 @@ this.regresponse=this.service._registerresp()
 
 confirmOTP(){
   this.regresponse.otptext=this.otptext;
+  console.log(this.regresponse)
   this.service.Confirmregisteration(this.regresponse).subscribe(item=>{
     this._response=item;
     if(this._response.result=='pass'){
-      this.toastr.success('Registration completed successfully.', 'Success');
+      this.toastr.success('Registeration completed successfully.', 'Success');
       this.service._registerresp.set({
         userid: 0,
         username:'',
